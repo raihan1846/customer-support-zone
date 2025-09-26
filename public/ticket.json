@@ -1,0 +1,110 @@
+[
+  {
+    "id": "10001",
+    "title": "Unable to login",
+    "description": "User reports invalid credentials error when attempting to login.",
+    "customer": { "id": "1001", "name": "Johnson", "email": "alice.johnson@example.com", "phone": "+1-555-0101" },
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-20T09:15:00Z"
+  },
+  {
+    "id": "0002",
+    "title": "Payment page error",
+    "description": "Customer sees a 500 server error when submitting payment.",
+    "customer": { "id": "1002", "name": "Bob Smith", "email": "bob.smith@example.com", "phone": "+1-555-0102" },
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-09-21T10:45:00Z"
+  },
+  {
+    "id": "0003",
+    "title": "Unable to download invoice",
+    "description": "Invoice download button does not work for some users.",
+    "customer": { "id": "1003", "name": "Charlie", "email": "charlie.davis@example.com", "phone": "+1-555-0103" },
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-09-22T11:30:00Z"
+  },
+  {
+    "id": "0004",
+    "title": "Mobile app crash",
+    "description": "The app crashes when opening the profile page.",
+    "customer": { "id": "1004", "name": "Diana", "email": "diana.prince@example.com", "phone": "+1-555-0104" },
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-22T12:00:00Z"
+  },
+  {
+    "id": "0005",
+    "title": "Password reset link not working",
+    "description": "Password reset emails are sent but the link leads to 404.",
+    "customer": { "id": "1005", "name": "Ethan", "email": "ethan.hunt@example.com", "phone": "+1-555-0105" },
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-09-23T08:20:00Z"
+  },
+  {
+    "id": "0006",
+    "title": "Slow website loading",
+    "description": "Landing page takes more than 15 seconds to load.",
+    "customer": { "id": "1006", "name": "Fiona", "email": "fiona.g@example.com", "phone": "+1-555-0106" },
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-09-23T09:40:00Z"
+  },
+  {
+    "id": "0007",
+    "title": "Email notifications not received",
+    "description": "Customer does not receive email confirmations for orders.",
+    "customer": { "id": "1007", "name": "Martin", "email": "george.martin@example.com", "phone": "+1-555-0107" },
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-09-24T10:00:00Z"
+  },
+  {
+    "id": "0008",
+    "title": "Error uploading files",
+    "description": "Files larger than 5MB fail to upload with no error message.",
+    "customer": { "id": "1008", "name": "Hannah Lee", "email": "hannah.lee@example.com", "phone": "+1-555-0108" },
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-09-24T11:25:00Z"
+  },
+  {
+    "id": "0009",
+    "title": "Incorrect billing amount",
+    "description": "User reports that their last invoice shows an incorrect total.",
+    "customer": { "id": "1009", "name": "Ian", "email": "ian.wright@example.com", "phone": "+1-555-0109" },
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-25T07:50:00Z"
+  },
+  {
+    "id": "0010",
+    "title": "Feature request: Dark mode",
+    "description": "Customer requests a dark mode option in the app.",
+    "customer": { "id": "1010", "name": "Julia", "email": "julia.roberts@example.com", "phone": "+1-555-0110" },
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-09-25T08:30:00Z"
+  },
+  {
+    "id": "0011",
+    "title": "Two-factor authentication failure",
+    "description": "2FA code not accepted even though correct.",
+    "customer": { "id": "1011", "name": "Kevin", "email": "kevin.hart@example.com", "phone": "+1-555-0111" },
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-09-26T09:10:00Z"
+  },
+  {
+    "id": "0012",
+    "title": "Profile picture not updating",
+    "description": "User cannot change their profile picture; old picture remains.",
+    "customer": { "id": "1012", "name": "Linney", "email": "laura.linney@example.com", "phone": "+1-555-0112" },
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-09-26T10:00:00Z"
+  }
+]
