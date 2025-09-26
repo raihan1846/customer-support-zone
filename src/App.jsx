@@ -14,12 +14,12 @@ const fetchData = async ()=>{
                    
 function App() {
 const [selectedTickets, setSelectedTicket] = useState([])
-const [resolvedTicket, setResolveTicket] = use
+const [resolvedTicket, setResolveTicket] = useState([])
   return (
     <div className="w-full max-w-[1200px] mx-auto p-2">
       <>
         <Navbar></Navbar>
-        <ProgressResolved selectedTickets={selectedTickets} setSelectedTicket={setSelectedTicket}></ProgressResolved>
+        <ProgressResolved selectedTickets={selectedTickets} setSelectedTicket={setSelectedTicket} resolvedTicket={resolvedTicket}></ProgressResolved>
         <Suspense fallback={<span className="loading loading-spinner text-error"></span>}>
           <div className='flex mt-20'>
             <div className='w-[900px]'>
@@ -29,7 +29,7 @@ const [resolvedTicket, setResolveTicket] = use
             </div>
             <div className='w-[300px]'>
               <h1 className='text-xl font-semibold mb-10'>Task Status</h1>
-              <TaskStatus selectedTickets={selectedTickets} setSelectedTicket={setSelectedTicket}></TaskStatus>
+              <TaskStatus selectedTickets={selectedTickets} setSelectedTicket={setSelectedTicket} resolvedTicket={resolvedTicket} setResolveTicket={setResolveTicket}></TaskStatus>
             </div>
 
           </div>
