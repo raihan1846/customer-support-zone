@@ -1,6 +1,6 @@
 import React from 'react';
 import imageOne from "../assets/vector1.png"
-const ProgressResolved = () => {
+const ProgressResolved = ({selectedTickets,setSelectedTicket}) => {
     return (
       <div className="flex flex-col lg:flex-row gap-4">
       <div
@@ -12,7 +12,7 @@ const ProgressResolved = () => {
         //   }}
         >
       <h2 className="text-xl font-bold text-white">In Progress</h2>
-      <span className="text-2xl font-semibold text-white">0</span>
+      <span className="text-2xl font-semibold text-white">{selectedTickets.length}</span>
     </div>
 
     <div className="flex-1 bg-gradient-to-r from-[#54CF68] to-[#00827A] p-6 rounded-lg flex flex-col items-center justify-center h-[250px]">
