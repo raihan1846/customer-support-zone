@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import ProgressResolved from './components/ProgressResolved/ProgressResolved';
 import TaskStatus from './components/TaskStatus/TaskStatus';
 import Footer from './components/Footer/Footer';
+import { ToastContainer } from 'react-toastify';
 
 const fetchData = async () => {
   const res = await fetch('/ticket.json');
@@ -41,7 +42,7 @@ function App() {
           <div className="w-full md:w-[300px]">
             <h1 className="text-xl font-bold mb-6">Task Status</h1>
             <TaskStatus
-              selectedTickets={selectedTickets}
+              selectedTickets={selectedTickets} 
               setSelectedTicket={setSelectedTicket}
               resolvedTicket={resolvedTicket}
               setResolveTicket={setResolveTicket}
@@ -52,6 +53,7 @@ function App() {
       </Suspense>
     </div>
     <Footer></Footer>
+    <ToastContainer></ToastContainer>
     </>
   );
 }

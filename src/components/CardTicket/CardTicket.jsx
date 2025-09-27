@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import imageCl from "../../assets/ri_calendar-line.png";
+import { toast } from 'react-toastify';
 
 const CardTicket = ({ ticket, setSelectedTicket }) => {
     const [isSelected, setIsSelected] = useState(false)
+   
     const handleClick = () => {
+        if(!isSelected){
         setIsSelected(!isSelected);
         setSelectedTicket(p => {
             return [...p, { id: ticket.id, title: ticket.title, count: p.length + 1 }]
 
-        })
+        })}else{
+            toast("Already selected")
+        }
     }
+     
     return (
         <div
             key={ticket.id}
@@ -27,7 +33,6 @@ const CardTicket = ({ ticket, setSelectedTicket }) => {
                         </p>
                     </div>
                 </div>
-                {/* disabled={isSelected} onClick={()=>setIsSelected(true)} */}
                 <p onClick={handleClick} className="text-gray-600 text-sm md:text-base">
                     {isSelected
                         ? ticket.description
@@ -45,7 +50,7 @@ const CardTicket = ({ ticket, setSelectedTicket }) => {
                     <div className="flex justify-between items-center gap-2">
                         <h3>{ticket.customer.name}</h3>
                         <span className="flex items-center gap-1">
-                            <img className="w-2 h-2" src={imageCl} alt="" />
+                            <img className="w-4 h-4" src={imageCl} alt="" />
                             {new Date(ticket.createdAt).toLocaleDateString()}
                         </span>
                     </div>

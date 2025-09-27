@@ -12,7 +12,7 @@
     "id": "0002",
     "title": "Payment page error",
     "description": "Customer sees a 500 server error when submitting payment.",
-    "customer": { "id": "1002", "name": "Bob Smith", "email": "bob.smith@example.com", "phone": "+1-555-0102" },
+    "customer": { "id": "1002", "name": "Smith", "email": "bob.smith@example.com", "phone": "+1-555-0102" },
     "priority": "Medium",
     "status": "In Progress",
     "createdAt": "2025-09-21T10:45:00Z"
@@ -66,7 +66,7 @@
     "id": "0008",
     "title": "Error uploading files",
     "description": "Files larger than 5MB fail to upload with no error message.",
-    "customer": { "id": "1008", "name": "Hannah Lee", "email": "hannah.lee@example.com", "phone": "+1-555-0108" },
+    "customer": { "id": "1008", "name": "Lee", "email": "hannah.lee@example.com", "phone": "+1-555-0108" },
     "priority": "High",
     "status": "In Progress",
     "createdAt": "2025-09-24T11:25:00Z"

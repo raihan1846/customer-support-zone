@@ -1,9 +1,12 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 const TaskStatus = ({ selectedTickets = [], setSelectedTicket, resolvedTicket, setResolveTicket }) => {
 
   const handleResolve = (id) => {
     const resolved = selectedTickets.find(ticket => ticket.id === id)
-
+    if (resolved) {
+      toast("Completed!")
+    }
     if (resolved) {
       setResolveTicket(p => [...p, resolved])
       setSelectedTicket(p => p.filter(ticket => ticket.id !== id))
@@ -27,7 +30,7 @@ const TaskStatus = ({ selectedTickets = [], setSelectedTicket, resolvedTicket, s
               </div>
             </div>
           ))}
-      <h2>Resove Task</h2>
+      <h2 className='font-bold text-xl'>Resove Task</h2>
       {
         resolvedTicket.length === 0 ? (<p className="text-gray-500">No resolved tasks yet.</p>) :
           resolvedTicket.map((ticket) =>

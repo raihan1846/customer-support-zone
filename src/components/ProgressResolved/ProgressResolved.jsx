@@ -1,26 +1,30 @@
 import React from 'react';
-const ProgressResolved = ({selectedTickets,resolvedTicket}) => {
-    return (
-      <div className="flex flex-col lg:flex-row gap-4">
+import bgVone from "../../assets/Frame1.png";
+
+const ProgressResolved = ({ selectedTickets, resolvedTicket }) => {
+  return (
+    <div className="flex flex-col lg:flex-row gap-4">
       <div
-          className="flex-1 relative h-[250px] p-6 rounded-lg flex flex-col items-center justify-center bg-gradient-to-r from-[#632EE3]/70 to-[#9F62F2]/70"
-        //   style={{
-        //     backgroundImage: `url(${imageOne})`,
-        //     backgroundSize: "cover",
-        //     backgroundPosition: "center",
-        //   }}
-        >
-      <h2 className="text-xl font-bold text-white">In Progress</h2>
-      <span className="text-2xl font-semibold text-white">{selectedTickets.length}</span>
-    </div>
+        className="flex-1 relative h-[250px] p-6 rounded-lg flex flex-col items-center justify-center bg-cover bg-no-repeat bg-center bg-blend-overlay"
+        style={{
+          backgroundImage: `linear-gradient(to bottom, #632EE3, #9F62F2), url(${bgVone})`,
+        }}
+      >
+        <h2 className="text-xl font-bold text-white drop-shadow-md">In Progress</h2>
+        <span className="text-2xl font-semibold text-white drop-shadow-md">{selectedTickets.length}</span>
+      </div>
 
-    <div className="flex-1 bg-gradient-to-r from-[#54CF68] to-[#00827A] p-6 rounded-lg flex flex-col items-center justify-center h-[250px]">
-      <h2 className="text-xl font-bold text-white">Resolved</h2>
-      <span className="text-2xl font-semibold text-white">{resolvedTicket.length}</span>
+      <div
+        className="flex-1 h-[250px] p-6 rounded-lg flex flex-col items-center justify-center bg-cover bg-no-repeat bg-center bg-blend-overlay"
+        style={{
+          backgroundImage: `linear-gradient(to right, #54CF68, #00827A), url(${bgVone})`,
+        }}
+      >
+        <h2 className="text-xl font-bold text-white drop-shadow-md">Resolved</h2>
+        <span className="text-2xl font-semibold text-white drop-shadow-md">{resolvedTicket.length}</span>
+      </div>
     </div>
-  </div>
-
-    );
+  );
 };
 
 export default ProgressResolved;
