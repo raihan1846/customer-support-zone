@@ -1,16 +1,36 @@
-# React + Vite
+# What is JSX, and why is it used?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ans: JSX means javascript XML, it's used for code read and write easyway.add logic and html same file 
+## What is the difference between State and Props?
 
-Currently, two official plugins are available:
+Ans: State -> self data and 
+     Props-> others data,
+     State -> it's changeable and component update this,
+     Props -> it's not changeable, if you change first change parent component
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+## What is the useState hook, and how does it work?
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Ans: It's react hook, it's used for functional component to state create and manage 
+     Ex: const [manageData, setManageData] = useState(0);
+## How can you share state between components in React?
 
-## Expanding the ESLint configuration
+Ex: function Dream() {
+      const [dreamEl, setDreamEl] = useState(0);
+      return (
+        <>
+          <ChildA dreamEl={dreamEl} />
+          <ChildB setDreamEl={setDreamEl} />
+        </>
+      );
+    }
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## How is event handling done in React?
+
+Ans:function ClickMe() {
+     const handleClick = () => {
+       alert("Click!");
+     };
+   
+     return <button onClick={handleClick}>Click Me</button>;
+   }
