@@ -1,5 +1,4 @@
 import React from 'react';
-import imageOne from "../assets/vector1.png"
 const ProgressResolved = ({selectedTickets,resolvedTicket}) => {
     return (
       <div className="flex flex-col lg:flex-row gap-4">

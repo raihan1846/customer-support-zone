@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import imageCl from "../assets/ri_calendar-line.png";
 
-const CardTicket = ({ ticket, selectedTickets, setSelectedTicket }) => {
+const CardTicket = ({ ticket, setSelectedTicket }) => {
     const [isSelected, setIsSelected] = useState(false)
     const handleClick = () => {
         setIsSelected(!isSelected);

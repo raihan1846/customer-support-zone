@@ -13,28 +13,36 @@ const TaskStatus = ({selectedTickets = [],setSelectedTicket,resolvedTicket, setR
     }
     return (
         <div className="flex flex-col gap-4">
-        {selectedTickets.map((ticket) => (
-          <div
-            className="card card-dash bg-base-100 w-96 shadow-md"
-          >
+        {
+        selectedTickets.length === 0 ? (
+            <p className="text-gray-500">Select a ticket to add to Task Status</p>
+          ): 
+        selectedTickets.map((ticket) => (
+          <div key={ticket.id} className="card card-dash bg-base-100 w-96 shadow-md" >
             <div className="card-body">
               <h2 className="card-title">
-                {ticket.title}{" "}
+                {ticket.title}
                 <span className="text-sm text-gray-500">(#{ticket.count})</span>
               </h2>
               <div className="card-actions">
-                <button onClick={()=>handleResolve(ticket.id)} className="btn btn-primary">Resolve</button>
+                <button onClick={()=>handleResolve(ticket.id)} className="btn btn-primary w-full">Completed</button>
               </div>
             </div>
           </div>
         ))}
-
+<h2>Resove Task</h2>
 {
+    resolvedTicket.length === 0 ? (<p className="text-gray-500">No resolved tasks yet.</p>) :
     resolvedTicket.map((ticket)=>
-    <div>
-            <h2>{ticket.title}</h2>
-            <h2>Test -2</h2>
-        </div>
+    <div key={ticket.id} className="card card-dash bg-gray-100 w-96 shadow-md" >
+            <div className="card-body">
+              <h2 className="card-title">{ticket.title}</h2>
+              <div className="flex justify-between">
+                <p className="text-green-500">✔ Completed</p>
+                <p className="text-green-500 text-end">Click to remove</p>
+              </div>
+            </div>
+          </div>
     )
 }
         
