@@ -1,5 +1,5 @@
 import React from 'react';
-import imagPlus from "../assets/Vector.png"
+import imagPlus from "../../assets/Vector.png"
 const Navbar = () => {
   return (
     <div className="navbar m-2">

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import imageCl from "../assets/ri_calendar-line.png";
+import imageCl from "../../assets/ri_calendar-line.png";
 
 const CardTicket = ({ ticket, setSelectedTicket }) => {
     const [isSelected, setIsSelected] = useState(false)
